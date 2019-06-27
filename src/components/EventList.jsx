@@ -9,7 +9,7 @@ export default class EventList extends React.Component {
     return this.props.events.map(this.renderEvent)
   }
   renderEvent = (event) => {
-    return <li><Link to={`/events/${event.id}`}>{event.description}</Link></li>
+    return <li key={event.id}><Link to={`/events/${event.id}`}>{event.description}</Link></li>
   }
   render() {
     return (
