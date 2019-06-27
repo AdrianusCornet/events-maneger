@@ -1,4 +1,4 @@
-import { EVENTS_FETCHED, loadEvents } from '../actions/events';
+import { EVENTS_FETCHED } from '../actions/events';
 
 const initialState = null
 
