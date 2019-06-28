@@ -1,7 +1,8 @@
 import React from 'react'
-import {loadEvents} from '../actions/events'
-import {connect} from 'react-redux'
+import { loadEvents } from '../actions/events'
+import { connect } from 'react-redux'
 import EventList from './EventList'
+import CreateEventFormContainer from './CreateEventFormContainer'
 
 class EventListContainer extends React.Component {
   componentDidMount() {
@@ -9,7 +10,12 @@ class EventListContainer extends React.Component {
   }
 
   render() {
-    return <EventList events={this.props.events} />
+    return (
+      <div>
+        <EventList events={this.props.events} />
+        <CreateEventFormContainer />
+      </div>
+    )
   }
 }
 
@@ -17,4 +23,4 @@ const mapStateToProps = state => ({
   events: state.events
 })
 
-export default connect(mapStateToProps, {loadEvents})(EventListContainer)
+export default connect(mapStateToProps, { loadEvents })(EventListContainer)
