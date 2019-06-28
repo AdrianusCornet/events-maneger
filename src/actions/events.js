@@ -1,5 +1,8 @@
 import request from 'superagent'
 
+/**
+ * fetch events
+ */
 export const EVENTS_FETCHED = 'EVENTS_FETCHED'
 
 const baseUrl = 'http://localhost:4000'
@@ -21,3 +24,7 @@ export const loadEvents = () => (dispatch, getState) => {
     })
     .catch(console.error)
 }
+
+/**
+ * create events
+ */
